@@ -1,14 +1,6 @@
-"""Monte um cadastro de alunos com:
-
-Nome
-
-Lista de notas
-
-Depois mostre:
-
-✅ A média de cada aluno
-✅ Apenas os alunos com média acima de 7
-✅ O aluno com a menor média"""
+""" 
+Fazer um dicionário com nomes de alunos e notas, depois aplicar map para calcular se estão aprovados ou reprovados.
+"""
 
 id_aluno = 1 
 alunos = {}
@@ -39,11 +31,7 @@ for id, dados in alunos.items():
     print(f"ID: {id}")
     for c, v in dados.items():
         print(f"{c} : {v}")
-
-for maior in alunos.values():
-    if maior['media'] >= 7:
-        print(f"Media maior que 7: {maior['nome']}")
-
-menor = min(alunos.items(), key = lambda x: x[1]['media'])
-print(f"{menor[1]['nome']}, media {menor[1]['media']}")
-
+        
+aprovados = dict(map(lambda x: (x[1]['nome'], "Aprovado" if x[1]['media'] > 7 else "Reprovado"), alunos.items()))
+for n, a in aprovados.items():
+    print(f"{n} - {a}")
