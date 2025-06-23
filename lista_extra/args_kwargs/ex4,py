@@ -1,0 +1,14 @@
+""" Peça ao usuário para digitar uma frase com vários placeholders como {nome}, {idade}, {cidade}, e depois os valores. 
+Use **kwargs para preencher."""
+
+def formata(texto, **kwargs):
+    print(texto.format(**kwargs))
+    
+texto = input("Texto: ")
+    
+nome = input("Nome: ")
+idade = int(input("Idade: "))
+cidade = input("cidade: ")
+
+(formata(texto, nome = nome, idade = idade, cidade = cidade))
+
