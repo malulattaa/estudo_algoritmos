@@ -4,7 +4,6 @@ recursiva para uma lista ordenada
 
 """
 
-
 def busca(lista, elemento, inicio, fim):
     if inicio > fim:
         return - 1

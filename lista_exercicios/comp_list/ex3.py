@@ -8,8 +8,8 @@ lista = []
 while True:
     p = input("Palavra: ")
     lista.append(p)
-    sair = input("Deseja continuar add? (S/N) ")
-    if sair == 'S':
+    sair = input("Deseja continuar add? (S/N) ").upper()
+    if sair == 'N':
         break
     
 inverter = [x[::-1] for x in lista]
